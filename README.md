@@ -39,3 +39,51 @@
 - [ ]  Only a is true.
 - [ ]  Only b is true.
 - [ ]  Both a and b are false.
+  
+## Threads with Callables.
+* Write code to achieve the following.
+  - A class Client with a main method.
+  - Create a class ArrayCreator which takes as input a number (n)
+  - ArrayCreator should create an ArrayList which should contain numbers from 1 to n
+  - ArrayCreator should implement appropriate Callable interface and return the arraylist discussed above to calling thread
+  - Client class should invoke ArrayCreator over a new thread and get the arraylist from ArrayCreator class and print it.
+
+**ArrayCreator.java**
+```java
+import java.util.ArrayList;
+import java.util.*;
+import java.util.concurrent.Callable;
+
+public class ArrayCreator implements Callable<List<Integer>> {
+    int number;
+
+    ArrayCreator(int number) {
+        this.number = number;
+    }
+
+    @Override
+    public List<Integer> call() {
+        List<Integer> listOfNumbers = new ArrayList<>();
+        for (int i = 1; i <= number; i++) {
+            listOfNumbers.add(i);
+        }
+        return listOfNumbers;
+    }
+}
+```
+
+**Client.java**
+```java
+ public class Client {
+    public static void main(String args[]) throws ExecutionException, InterruptedException {
+        ExecutorService service = Executors.newSingleThreadExecutor();
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        ArrayCreator arrayCreator = new ArrayCreator(number);
+        Future<List<Integer>> list = service.submit(arrayCreator);
+        List<Integer> result = list.get();
+        System.out.println(result.toString());
+        service.shutdown();
+    }
+}
+```
