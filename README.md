@@ -1,5 +1,17 @@
 # JavaInterviewQuestions
 
+## Can we create an object of an Abstract class?
+- [ ] Yes
+- [x] No
+
+## Can we declare abstract constructor or abstract static methods?
+- [ ] Yes
+- [x] No
+
+## Can we create a reference to an abstract class so that it can be used to point to a subclass object?
+- [x] Yes
+- [ ] No
+
 ## Abstract Classes - Which of the following is true?
 * Abstract classes should necessarily have abstract methods.
 * Classes having abstract methods should be abstract.
