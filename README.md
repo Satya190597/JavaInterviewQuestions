@@ -1,5 +1,19 @@
 # JavaInterviewQuestions
 
+## Abstract Classes - Which of the following is true?
+* Abstract classes should necessarily have abstract methods.
+* Classes having abstract methods should be abstract.
+- [ ]  Both are correct.
+- [ ]  Both are incorrect.
+- [ ]  i is correct, ii is incorrect.
+- [x]  i is incorrect, ii is correct.
+  
+## Which keyword is used to make a non-inheritable class in Java?
+- [ ]  static.
+- [ ]  abstract.
+- [x]  final.
+- [ ]  finally.
+
 ## Executors and callables. - Which of the following is correct?
 * Executor manages the assignment of tasks  to threads within the thread pool. 
 * Waiting Queue holds the tasks that couldn't be assigned to threads in the thread pool.
@@ -87,3 +101,4 @@ public class ArrayCreator implements Callable<List<Integer>> {
     }
 }
 ```
+
