@@ -1,5 +1,20 @@
 # JavaInterviewQuestions
 
+## In Java strings are?
+- [ ] Mutable
+- [x] Immutable
+
+## Is String a primitive type in Java?
+- [ ] Yes
+- [x] No
+
+## What is the difference between StringBuilder and StringBuffer?
+| StringBuffer     | StringBuilder    |
+| ---------------- | ---------------- |
+| Thread Safe      | Not Thread Safe  |
+| Synchronized     | Not Synchronized |
+| Slower           | Faster           |
+
 ## Can we create an object of an Abstract class?
 - [ ] Yes
 - [x] No
