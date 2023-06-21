@@ -15,6 +15,47 @@
 | Synchronized     | Not Synchronized |
 | Slower           | Faster           |
 
+## Write a code to create a custom immutable class.
+- Class must be declared as final.
+- Data members in the class must be declared as private.
+- Data members in the class must be declared as final.
+- Use parameterized constructor.
+- Use getter methods for data members.
+- Don't use setter methods for data members.
+```java
+// 1. Class must be declared as final. [Reason : So that child class can't be created]
+public class Employee {
+
+    // 2. Data members in the class must be declared as private. [Reason : So that direct access is not allowed]
+
+    // 3. Data members in the class must be declared as final. [Reason : We can't change the value of it after object creation]
+    private final String name;
+    private final int age;
+    private final int salary;
+
+    // 4. Introduce parameterized constructor. [Reason : All the final data members must initialize under parameterized constructor]
+
+    Employee(String name,int age,int salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    // 5. Don't provide setter methods for data members. Only getter method should be allowed.
+    public int getAge() {
+        return this.age;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getSalary() {
+        return this.salary;
+    }
+}
+```
+
 ## Can we create an object of an Abstract class?
 - [ ] Yes
 - [x] No
