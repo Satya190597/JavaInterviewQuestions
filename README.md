@@ -82,6 +82,15 @@ public class Employee {
 - [x]  final.
 - [ ]  finally.
 
+## What is Marker Interface?
+A marker interface is an interface that **doesn’t have** any **methods** or **constants** inside it.
+It provides **run-time** type information about the objects. So the compiler and JVM have additional information about the object.
+
+## Name some built in marker interface in Java.
+- Serializable.
+- Cloneable.
+- Remote.
+
 ## Executors and callables. - Which of the following is correct?
 * Executor manages the assignment of tasks  to threads within the thread pool. 
 * Waiting Queue holds the tasks that couldn't be assigned to threads in the thread pool.
