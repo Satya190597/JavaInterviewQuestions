@@ -170,3 +170,16 @@ public class ArrayCreator implements Callable<List<Integer>> {
 }
 ```
 
+## Serialization and Deserialization.
+- Serialization is the process of converting the **state** of an object to a **byte stream.**
+- Deserialization is the **reverse** of serialization and converts the **byte stream** back to the **original object**.
+- Only **non-static** data members get serialized.
+- A class must implement **Serializable** interface to be eligible for serialization.
+- **ObjectOutputStream** class helps to serialize an object.
+- **ObjectInputStream** class helps to deserialize an object.
+- Java **transient** keyword helps to prevent a particular field from being serialized.
+- While converting the **byte stream** back to the **original object**, the **constructor** of the object is not called.
+- **Serializable** interface has no methods or fields of it’s own.
+- If the parent class has already implemented the **Serializable interface**, in that case a child class doesn’t have to implement it.
+- **Serializable** interface must be implemented by all **associated** objects.
+
