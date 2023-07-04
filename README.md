@@ -91,6 +91,14 @@ It provides **run-time** type information about the objects. So the compiler and
 - Cloneable.
 - Remote.
 
+## Difference Between Aggregation and Composition.
+| Aggregation                                                     | Composition                                               |
+| --------------------------------------------------------------- | --------------------------------------------------------- |
+| Weak Association.                                               | Strong Association.                                       |
+| Classes in relation can exist independently.                    | One class is dependent on Another Independent class.      |
+| One class **has-a** relationship with another class.            | Once class **belongs-to** another class.                  |
+| Helps with code reusability. Since classes exist independently. | Code is not that reusable as the association is dependent.|
+
 ## Executors and callables. - Which of the following is correct?
 * Executor manages the assignment of tasks  to threads within the thread pool. 
 * Waiting Queue holds the tasks that couldn't be assigned to threads in the thread pool.
